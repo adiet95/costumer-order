@@ -25,3 +25,5 @@ RUN go install -v ./...
 #Setup hot-reload for dev stage
 RUN go get github.com/githubnemo/CompileDaemon
 RUN go get -v golang.org/x/tools/gopls
+
+CMD ["go", "run", ".", "serve"]
