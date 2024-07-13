@@ -1,7 +1,7 @@
 package auth
 
 import (
-	"github.com/adiet95/go-order-api/src/database/models"
+	"github.com/adiet95/costumer-order/src/database/models"
 	"github.com/stretchr/testify/mock"
 )
 

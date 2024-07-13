@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/adiet95/go-order-api/src/config"
+	"github.com/adiet95/costumer-order/src/config"
 	_ "github.com/joho/godotenv/autoload"
 )
 

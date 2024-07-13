@@ -6,9 +6,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/adiet95/go-order-api/src/database/models"
-	"github.com/adiet95/go-order-api/src/interfaces"
-	"github.com/adiet95/go-order-api/src/libs"
+	"github.com/adiet95/costumer-order/src/database/models"
+	"github.com/adiet95/costumer-order/src/interfaces"
+	"github.com/adiet95/costumer-order/src/libs"
 )
 
 type user_ctrl struct {

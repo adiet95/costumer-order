@@ -3,7 +3,7 @@ package database
 import (
 	"log"
 
-	"github.com/adiet95/go-order-api/src/database/models"
+	"github.com/adiet95/costumer-order/src/database/models"
 	"github.com/go-gormigrate/gormigrate/v2"
 	"github.com/spf13/cobra"
 	"gorm.io/gorm"

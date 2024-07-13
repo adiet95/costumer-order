@@ -3,9 +3,9 @@ package database
 import (
 	"errors"
 	"fmt"
+	"gorm.io/driver/mysql"
 	"os"
 
-	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
 
@@ -14,10 +14,10 @@ func New() (*gorm.DB, error) {
 	user := os.Getenv("DB_USER")
 	password := os.Getenv("DB_PASS")
 	dbName := os.Getenv("DB_NAME")
+	port := os.Getenv("DB_PORT")
+	dsn := fmt.Sprintf("%s:%s@tcp(%v:%v)/%s", user, password, host, port, dbName)
 
-	config := fmt.Sprintf("host=%s user=%s password=%s dbname=%s", host, user, password, dbName)
-
-	gormDB, err := gorm.Open(postgres.Open(config), &gorm.Config{})
+	gormDB, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
 		return nil, errors.New("failed connection to database")
 	}

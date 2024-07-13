@@ -44,7 +44,7 @@ go run . migrate -d //for rollback
 1. Clone the repository
 
 ```bash
-https://github.com/adiet95/go-order-api.git
+https://github.com/adiet95/costumer-order.git
 ```
 
 2. Install dependencies

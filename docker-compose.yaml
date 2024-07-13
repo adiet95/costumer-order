@@ -1,8 +1,8 @@
-version: '1'
+version: '3'
 services:
   costumer-order-services:
     container_name: costumer-order-services
-    image: costumer_order_services:1.0.0
+    image: costumer_order_services:1.1.0
     build:
       context: .
       dockerfile: Dockerfile
@@ -18,20 +18,24 @@ services:
     volumes:
       - .:/app
     depends_on:
-      - postgresdb
+      - mysqldb
     ports:
       - "8081:8080"
-  postgresdb:
-    image: postgres:latest
-    container_name: postgres_container
+  mysqldb:
+    image: mysql:8.1
+    container_name: mysql
     environment:
-      - POSTGRES_USER=${DB_USER}
-      - POSTGRES_PASSWORD=${DB_PASS}
-      - POSTGRES_DB=${DB_NAME}
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PASS}
+      - MYSQL_DATABASE=${DB_NAME}
       - DATABASE_HOST=${DB_HOST}
     ports:
-      - '5432:5432'
+      - '3310:3309'
     volumes:
-      - ./pg_data:/var/lib/postgresql/data
+      - mysql_volume:/var/lib/mysql
+    networks:
+      - mysql_network
 volumes:
-  pgdata: {}
+  mysql_volume: {}
+networks:
+  mysql_network: {}

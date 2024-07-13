@@ -1,7 +1,7 @@
 package order
 
 import (
-	"github.com/adiet95/go-order-api/src/middleware"
+	"github.com/adiet95/costumer-order/src/middleware"
 	"github.com/labstack/echo/v4"
 	"gorm.io/gorm"
 )

@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/adiet95/go-order-api/src/routers"
+	"github.com/adiet95/costumer-order/src/routers"
 	"github.com/spf13/cobra"
 )
 

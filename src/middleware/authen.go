@@ -4,7 +4,7 @@ import (
 	"github.com/labstack/echo/v4"
 	"strings"
 
-	"github.com/adiet95/go-order-api/src/libs"
+	"github.com/adiet95/costumer-order/src/libs"
 )
 
 func CheckAuth(next echo.HandlerFunc) echo.HandlerFunc {

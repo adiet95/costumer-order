@@ -1,7 +1,7 @@
 package config
 
 import (
-	"github.com/adiet95/go-order-api/src/database"
+	"github.com/adiet95/costumer-order/src/database"
 	"github.com/spf13/cobra"
 )
 

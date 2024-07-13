@@ -3,8 +3,8 @@ package auth
 import (
 	"testing"
 
-	"github.com/adiet95/go-order-api/src/database/models"
-	"github.com/adiet95/go-order-api/src/libs"
+	"github.com/adiet95/costumer-order/src/database/models"
+	"github.com/adiet95/costumer-order/src/libs"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 )

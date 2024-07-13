@@ -4,10 +4,10 @@ import (
 	"errors"
 	"github.com/labstack/echo/v4"
 
-	"github.com/adiet95/go-order-api/src/database"
-	auth "github.com/adiet95/go-order-api/src/modules/auth"
-	"github.com/adiet95/go-order-api/src/modules/order"
-	"github.com/adiet95/go-order-api/src/modules/users"
+	"github.com/adiet95/costumer-order/src/database"
+	auth "github.com/adiet95/costumer-order/src/modules/auth"
+	"github.com/adiet95/costumer-order/src/modules/order"
+	"github.com/adiet95/costumer-order/src/modules/users"
 )
 
 func New(mainRoute *echo.Echo) (*echo.Echo, error) {
