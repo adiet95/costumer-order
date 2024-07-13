@@ -15,7 +15,7 @@ func New() (*gorm.DB, error) {
 	password := os.Getenv("DB_PASS")
 	dbName := os.Getenv("DB_NAME")
 	port := os.Getenv("DB_PORT")
-	dsn := fmt.Sprintf("%s:%s@tcp(%v:%v)/%s", user, password, host, port, dbName)
+	dsn := fmt.Sprintf("%s:%s@tcp(%v:%v)/%s?charset=utf8mb4&parseTime=True&loc=Local", user, password, host, port, dbName)
 
 	gormDB, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {

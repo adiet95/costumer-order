@@ -4,6 +4,7 @@ import (
 	"github.com/adiet95/costumer-order/src/database/models"
 	"github.com/adiet95/costumer-order/src/interfaces"
 	"github.com/adiet95/costumer-order/src/libs"
+	"log"
 )
 
 type user_service struct {
@@ -40,8 +41,9 @@ func (re *user_service) Update(data *models.User, email, emailUpdate string) *li
 		return libs.New(err.Error(), 400, true)
 	}
 
+	log.Println(data.Email, emailUpdate)
 	if oldData.Role == "admin" {
-		if emailUpdate == "" {
+		if emailUpdate != "" {
 			data.Email = emailUpdate
 		}
 		valid := libs.Validation(data.Email, data.Password)
